@@ -33,6 +33,20 @@ bool Prov(int[,] mass, int x, int y)
     }
 
 }
+void Vuvod(int[,] mass)
+{
+    for (int i = 0; i < mass.GetLength(0); i++)
+    {
+        Console.Write($" Строка - {i}: ");
+        for (int j = 0; j < mass.GetLength(1); j++)
+        {
+            Console.Write(mass[i, j] + ", ");
+        }
+        Console.Write("\n");
+    }
+    Console.WriteLine("-----------------------------------------");
+
+}
 int lenght1 = 8;
 int lenght2 = 5;
 
@@ -46,9 +60,13 @@ int[,] myArray = new int[lenght1, lenght2];
 
 myArray = RandomArrayD(lenght1, lenght2);
 
+Vuvod(myArray);
+
+
+
 if (Prov(myArray,x,y))
 {
-    Console.WriteLine(myArray[x,y]);
+    Console.WriteLine($"Вот ваше число - {myArray[x,y]}");
 }
 else
 {
