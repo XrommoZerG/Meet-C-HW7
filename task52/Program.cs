@@ -46,6 +46,7 @@ double[] SR(int[,] mass)
 
     for (int i = 0; i < mass.GetLength(1); i++)
     {
+        sr = 0.0;
         for (int j = 0; j < mass.GetLength(0); j++)
         {
             sr += (double)mass[j, i];
